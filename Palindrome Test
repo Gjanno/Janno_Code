@@ -1,0 +1,37 @@
+Input_A = "blue"
+## .Upper() is used to turn Input_A to allow all characters to be in upper space
+Upper_Input_A= Input_A.upper()
+
+print("We are going to check if a word is a palindrome")
+print("The word is: " + Upper_Input_A)
+
+## len is used to find the length of Input_A
+B= len(Input_A)
+
+## Number serves the function to find the last index of Input_A
+Number= B - 1
+
+## Input_B=[] is an open olist
+Input_B=[]
+
+## While loop allow the loop to continue untill the Number reaches index=0
+while Number >= 0:
+  ## .append serves the function to add character to the list Input_B
+  Input_B.append(Input_A[Number])
+  ## Number -=1 serves the fucntion to reduce the value of Number by 1 everytime the loop is run
+  Number -= 1
+## REVERSE_A serves the function to allow the list of Input_B to be turned into a string
+REVERSE_A=' '.join(Input_B)
+
+## REPLACED_A serves the function to remove spaces between the string for easier comparison
+REPLACED_A= REVERSE_A.replace(' ','')
+
+##Upper_REPLACED_A serves the fucntion to make all the characters in upper case
+Upper_REPLACED_A= REPLACED_A.upper()
+
+print("This is the reversed word: " + Upper_REPLACED_A)
+if Upper_Input_A==Upper_REPLACED_A:
+  print("Yes it is a palindrome")
+else:
+  print("No it is not a palindrome")
+
